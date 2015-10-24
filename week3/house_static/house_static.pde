@@ -15,7 +15,7 @@ b = floor(random(256));
 
 // roof
 stroke(255);  // white
-fill(r,g,b);  // random color
+fill(r,g,b);  // red
 triangle(x+ w/2, y, x, y+ h/2, x+w, y+h/2);
 
 rectMode(CORNERS);

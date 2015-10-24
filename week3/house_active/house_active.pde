@@ -3,7 +3,6 @@ int r, g, b;
 
 void setup(){
   size(300, 300);
-  background(0);
   
   x = 80;
   y = 50;
@@ -12,13 +11,15 @@ void setup(){
 }
 
 void draw(){
+  background(0);
   r = floor(random(256));
   g = floor(random(256));
   b = floor(random(256));
-  
+  x += 5;  // x = x+5;
+  x %= 300; // 0,1,2,3,4,5,6....299
   // roof
   stroke(255);  // white
-  fill(r,g,b);  // random color
+  fill(r,g,b);  // red
   triangle(x+ w/2, y, x, y+ h/2, x+w, y+h/2);
   
   rectMode(CORNERS);
